@@ -9,17 +9,24 @@ function App() {
   const [priceColor, setPriceColor] = useState(0);
   const [activeModelID, setActiveModelID] = useState(null);
   const [activeColorID, setActiveColorID] = useState(null);
+  const [colorActive, setColorActive] = useState("#3F3F3F")
+
+  console.log(activeColorID);
+  
 
   const cout = priceModel + priceColor;
 
   const handleModelClick = (price, itemId) => {
     setPriceModel(price);
     setActiveModelID(itemId);
+
   };
 
   const handleColorClick = (price, itemId) => {
     setPriceColor(price);
     setActiveColorID(itemId)
+    const LamboFounded = colors.find( item => item.id === itemId )
+    setColorActive(LamboFounded.ref)
   }
 
   return (
@@ -60,7 +67,7 @@ function App() {
       </section>
       <div className="price flexContainer">
         <p>{cout} €</p>
-        <button>Buy it !</button>
+        <button style={{backgroundColor:colorActive}}>Buy it !</button>
       </div>
     </>
   );
