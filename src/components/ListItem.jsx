@@ -1,14 +1,16 @@
-const ListItem = ({cost, setCost, name, price, color}) => {
-    const handleClick = () => {
-        color ?
-        setCost(cost + price) :
-        setCost(price)
-    }
-    return (
-        <div className={`flexContainer ${color}`} onClick={handleClick}>
-            <span>{name}</span> : 
-            <span>{price} €</span>
-        </div>
-    )
-}
-export default ListItem
+const ListItem = ({ itemId, name, price, color, onItemClick, isActive }) => {
+  const handleClick = () => {
+    onItemClick(price, itemId)
+  };
+  return (
+    <div
+      className={`flexContainer ${isActive && 'active'}` }
+      style={{ backgroundColor: color }}
+      onClick={handleClick}
+    >
+      <span>{name}</span>
+      <span>{price} €</span>
+    </div>
+  );
+};
+export default ListItem;

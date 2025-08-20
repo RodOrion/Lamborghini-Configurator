@@ -1,18 +1,70 @@
-:root {
-  --viola-nebule: #8C46C0;
-  --arancio-xanto: #F46D4D;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
 }
 div#root {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 4rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 4rem;
+}
+header h1 {
+    margin: 0 0 4rem;
+    border-bottom: 1px solid #999;
+    padding-bottom: 3rem;
+    display: inline-block;
+    padding-right: 6rem;
+}
+section {
+    margin-bottom: 6rem;
+}
+h2 {
+    margin: 2rem 0 3rem;
+}
+section#color span {
+    color: #f8f4f4;
+    font-size: 1.8rem;
 }
 section > div {
   padding: 4rem;
+  border-radius: 30px;
+  border: 1px solid #666;
+  margin: 2rem;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #f8f4f4;
+  transition: 0.5s ease;
 }
-#color > div.arancio {
-  background-color: var(--arancio-xanto);
+section > div:not(.active) {
+  transform: scale(0.95);
+  background-color: #fff;
 }
-#color > div.viola {
-  background-color: var(--viola-nebule);
+.price.flexContainer {
+    justify-content: center;
+    gap: 8rem;
+    margin-top: 4rem;
+    /* background-color: #3F3F3F; */
+    width: 80%;
+    margin: 4rem auto;
+    color: #3F3F3F;
+    border: 1px solid;
+    padding: 2rem;
+}
+.price.flexContainer p {
+    font-weight: 600;
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+button {
+    background-color: #3F3F3F;
+    color: #fff;
+    border: 1px solid;
+    padding: 0 4rem;
+    border-radius: 30px;
+    font-size: 2.4rem;
+}
+button:hover {
+  background-color: #f8f4f4;
+  color: #3F3F3F;
+  cursor: pointer;
 }
