@@ -1,0 +1,18 @@
+:root {
+  --viola-nebule: #8C46C0;
+  --arancio-xanto: #F46D4D;
+}
+div#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 4rem;
+}
+section > div {
+  padding: 4rem;
+}
+#color > div.arancio {
+  background-color: var(--arancio-xanto);
+}
+#color > div.viola {
+  background-color: var(--viola-nebule);
+}
